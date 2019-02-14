@@ -1,18 +1,20 @@
+/// Calculates the SDBM Hash of a given string.
+pub fn sdbm_hash(s: &str) -> u32 {
+    let mut hash: u32 = 0;
+
+    for ch in s.encode_utf16() {
+        hash = u32::from(ch)
+            .wrapping_add(hash << 6)
+            .wrapping_add(hash << 16)
+            .wrapping_sub(hash);
+    }
+
+    hash
+}
+
 #[cfg(test)]
 mod tests {
-    /// Calculates the SDBM Hash of a given string.
-    pub fn sdbm_hash(s: &str) -> u32 {
-        let mut hash: u32 = 0;
-
-        for ch in s.encode_utf16() {
-            hash = (ch as u32)
-                .wrapping_add(hash << 6)
-                .wrapping_add(hash << 16)
-                .wrapping_sub(hash);
-        }
-
-        return hash;
-    }
+    use super::*;
 
     // Test from https://www.programmingalgorithms.com/algorithm/sdbm-hash?lang=C%2B%2B
     #[test]
@@ -30,7 +32,7 @@ mod tests {
     }
 
     #[test]
-    fn zero() {
+    fn nothing() {
         assert_eq!(sdbm_hash(""), 0);
     }
 

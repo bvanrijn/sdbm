@@ -8,7 +8,7 @@ license = "MIT"
 readme = "README.md"
 keywords = ["sdbm", "hash", "hashing", "algorithm"]
 categories = ["algorithms"]
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Barend <11941174+bvanrijn@users.noreply.github.com>"]
 edition = "2018"
 
