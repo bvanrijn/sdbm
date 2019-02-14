@@ -1,0 +1,18 @@
+[package]
+name = "sdbm"
+description = "SDBM is a non-cryptographic hashing algorithm"
+documentation = "https://docs.rs/sdbm"
+homepage = "https://github.com/bvanrijn/sdbm"
+repository = "https://github.com/bvanrijn/sdbm"
+license = "MIT"
+readme = "README.md"
+keywords = ["sdbm", "hash", "hashing", "algorithm"]
+categories = ["algorithms"]
+version = "0.1.0"
+authors = ["Barend <11941174+bvanrijn@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+
+[badges]
+travis-ci = { repository = "bvanrijn/sdbm" }
